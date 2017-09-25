@@ -1,6 +1,11 @@
 What every scientist should know about IEEE-754 Standard for Floating-Point
 Arithmetic
 
-* Understand the role that IEEE-754 plays in society.
-* Explain the elements of the IEEE-754 representation.
-* Review and rewrite code that uses IEEE-754.
+* Describe the role that IEEE-754 plays in modern science.
+  - How would I evaluate this?
+* Describe the elements of the IEEE-754 floating-point representation.
+* Reflect on some pitfalls of IEEE-754 arithmetic.
+
+
+
+* Review and rewrite code doing basic IEEE-754 arithmetic.
