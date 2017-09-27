@@ -1,13 +1,127 @@
 \begin{frame}
 
-\frametitle{Positional Notation}
+\frametitle{Then Came Positional Notation}
+
+\begin{center}
+
+An approximation of the real numbers \textbf{\underline{to a desired degree of
+accuracy}}.
+
+\end{center}
 
 \begin{itemize}
 
-\item An approximation of real numbers.
+\item Historically, it greatly simplified arithmetic.
+
+\item All integers, and many fractions can be represented exactly.
+
+\item The rest is approximated to a desired degree of accuracy.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Integers in Positional Notation}
+
+\begin{itemize}
+
+\item An integer is represented by a finite sequence of digits:
+
+\[
+d_n \cdots d_1 d_0
+\]
+
+Where $0 \leq d_i < b$, and $b$ is called a \emph{base} or \emph{radix}.
+
+\item This has the following mathematical interpretation:
+
+\[
+\left\llbracket d_n \cdots d_1 d_0 \right\rrbracket =
+d_n \cdot b^n + \cdots + d_1 \cdot b^1 + d_0 \cdot b^0
+\]
+
+\item For instance, the number $8125$, in base $10$, has the following
+mathematical interpretation:
+
+\begin{align*}
+\left\llbracket 8125 \right\rrbracket_{10} &=
+8 \cdot 10^3 + 1 \cdot 10^2 + 2^\cdot 10^1 + 5 \cdot 10^0 \\
+&= 8\cdot 1000 + 2 \cdot 100 + 1 \cdot 10 + 5 \cdot 1
+\end{align*}
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Fractions in Positional Notation}
+
+\begin{itemize}
+
+\item The sequence may be interrupted by a radix point:
+
+\[
+\underbrace{d_n \cdots d_1 d_0}_{\text{(integral part)}}~.~\underbrace{d_{-1}
+d_{-2} \cdots d_{-m}}_{\text{(fractional part)}}
+\]
+
+\item This has the following mathematical interpretation:\begin{align*}
+\left\llbracket d_n \cdots d_{-m} \right\rrbracket =&~d_n \cdot b^n + \cdots +
+d_1 \cdot b^1 + d_0 \cdot b^0 +\\
+&~d_{-1} \cdot b^{-1} + d_{-2} \cdot b^{-2} + \cdots + d_{-m} \cdot b^{-m}
+\end{align*}
+
+\item For instance, the number $81.25$, in base $10$, has the following
+mathematical interpretation:\begin{align*}
+\left\llbracket 81.25 \right\rrbracket_{10} &=
+8 \cdot 10^1 + 1 \cdot 10^0 + 2^\cdot 10^{-1} + 5 \cdot 10^{-2} \\
+&= 8\cdot 10 + 2 \cdot 1 + 1 \cdot \frac{1}{10} + 5 \cdot \frac{1}{100}
+\end{align*}
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{An Example of Positional Notation}
+
+\begin{itemize}
+
+\item The value $8.125$ is composed of 4 digits: $8$, $1$, $2$, $5$, separated
+by a decimal point between $8$ and $1$.
+
+\item The order of the digits, relative to the decimal point is significant,
+and signifies a quantifier of a power of the base of the notation.
+
+\item $8.125 = 8\cdot 1 + 1 \cdot 0.1 + 2 \cdot 0.01 + 5 \cdot 0.001$.
 
 \item Some properties of real numbers do not hold for the approximation.
 
 \end{itemize}
+
+\begin{center}
+
+\begin{tabular}{cccc}
+$8$ & $1$ & $2$ & $5$ \\ \hline
+$10^1$ & $10^{-1}$ & $10^{-2}$ & $10^{-3}$
+\end{tabular}
+
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Doing Arithmetic In Positional Notation}
+
+\begin{center}
+
+These algorithms work equally well in all bases.
+
+\end{center}
 
 \end{frame}
