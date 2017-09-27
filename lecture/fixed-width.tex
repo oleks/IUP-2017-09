@@ -8,7 +8,55 @@
 
 \item The result of each operation must fit in $n$ digits.
 
-\item
+\end{itemize}
+
+\vspace{\fill}
+
+Example:
+
+\begin{itemize}
+
+\item Consider a 3-digit representation.
+
+\item How would you represent $8.555$?
+
+\item How would you represent $-8.555$?
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Rounding Modes}
+
+Rounding modes available in IEEE-754:
+
+\begin{itemize}
+
+\item Round to nearest, break ties to even.
+
+\item Round to nearest, break ties to odd.
+
+\item Round towards $0$.
+
+\item Round towards $+\infty$.
+
+\item Round towards $-\infty$.
+
+\end{itemize}
+
+How do they pan out in practice?
+
+\begin{itemize}
+
+\item Round to nearest, with ties to even is usually default.
+
+\item A program may choose its rounding mode, \\ and change while it is
+running.
+
+\item On GPUs, each floating-point instruction may be parametrized by the
+desired rounding mode.
 
 \end{itemize}
 
