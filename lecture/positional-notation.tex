@@ -94,7 +94,7 @@ mathematical interpretation:\begin{align*}
 
 \item Pad with 0's if need be.
 
-\item Add one digit at a time, left to right, with carry.
+\item Add one digit at a time, left to right, carry $1$ if need be.
 
 \end{itemize}
 
@@ -106,7 +106,7 @@ Examples:
 \begin{center}
 {\setlength{\tabcolsep}{1pt}
 \begin{tabular}{ccccc}
-  & $.$ \\
+  & {\scriptsize $1$} \\
   & $3$ & $.$ & $7$ & $7$  \\
 + & $2$ & $.$ & $8$ & ${\color{gray}0}$   \\ \hline
   & $6$ & $.$ & $5$ & $7$
@@ -130,7 +130,7 @@ Examples:
 \begin{center}
 {\setlength{\tabcolsep}{1pt}
 \begin{tabular}{cccccc}
-  & $.$ \\
+  & {\scriptsize $1$} \\
   & ${\color{gray}0}$ & $3$ & $.$ & $7$ & $7$  \\
 + & $2$ & $8$ & $.$ & ${\color{gray}0}$ & ${\color{gray}0}$ \\ \hline
   & $3$ & $1$ & $.$ & $7$ & $7$
@@ -143,86 +143,46 @@ Examples:
 
 \begin{frame}
 
-\frametitle{Doing Arithmetic In Positional Notation}
+\frametitle{Multiplication With Positional Notation}
 
-\begin{minipage}{0.5\textwidth}
+\vspace{\fill}
 
-\begin{center}
-\textbf{Addition}
-\end{center}
+\begin{minipage}{0.7\textwidth}
 
 \begin{itemize}
 
-\item Place the sequences so they align along the radix point.
+\item Align the sequences along \\ their right-most digit.
 
-\item Pad with 0's if need be.
+\item Disregard their radix points.
 
-\item Add one digit at a time, left to right, with carry.
-
-\end{itemize}
-
-\end{minipage}%
-\begin{minipage}{0.5\textwidth}
-
-\begin{center}
-\textbf{Multiplication}
-\end{center}
-
-\begin{itemize}
-
-\item Align the sequences along their right-most digit.
-
-\item Disregard the radix point.
-
-\item Multiply each digit of the top by each digit of the bottom.
+\item Multiply each digit of the top \\ by each digit of the bottom.
 
 \item Align and add the products.
 
+\item The number of decimal places \\ of the product is equal to the \\ sum of
+the number of decimal \\ places in the operands.
+
 \end{itemize}
 
-\end{minipage}
-
-\begin{center}
-
-These algorithms work equally well in all bases.
-
-\end{center}
-
-\end{frame}
-
-
-\begin{frame}
-
-\frametitle{Properties}
-
-\vspace{\fill}
-
-\begin{center}
-
-\begin{minipage}{0.5\textwidth}
-\begin{center}
-\textbf{Commutativity} \begin{align*}
-a \oplus b &= b \oplus a \\
-a \odot b &= b \odot a
-\end{align*}
-\end{center}
 \end{minipage}%
-\begin{minipage}{0.5\textwidth}
-\begin{center}
-\textbf{Associativity}~\frownie \begin{align*}
-\p{a \oplus b} \oplus c &\neq a \oplus \p{b \oplus c} \\
-\p{a \odot b} \odot c &\neq a \odot \p{b \odot c}
-\end{align*}
-\end{center}
+\begin{minipage}[t]{0.3\textwidth}
+
+{\setlength{\tabcolsep}{1pt}
+\begin{tabular}{ccccccc}
+&          && $3$ & $.$ & $7$ & $7$  \\
+&$\times$  && &   $2$ & $.$ & $8$  \\ \hline
+&{\scriptsize $7\cdot 8$} && & & $5$ & $6$ \\
+&{\scriptsize $7\cdot 8$} && & $5$ & $6$ & ${\color{gray}0}$ \\
+&{\scriptsize $3\cdot 8$} && $2$ & $4$ & ${\color{gray}0}$ & ${\color{gray}0}$ \\
+&{\scriptsize $7\cdot 2$} && & $1$ & $4$ & ${\color{gray}0}$ \\\
+&{\scriptsize $7\cdot 2$} && $1$ & $4$ & ${\color{gray}0}$ & ${\color{gray}0}$ \\
+$+$ &{\scriptsize $3\cdot 2$} && $6$ & ${\color{gray}0}$ & ${\color{gray}0}$ & ${\color{gray}0}$ \\
+\hline
+&& $1$ & $0.$ & $5$ & $5$ & $6$
+\end{tabular}
+}
+
 \end{minipage}
-
-\vspace{\fill}
-
-\textbf{Distributivity}~\frownie \begin{align*}
-a \odot \p{b \oplus c} &\neq a \odot b \oplus a \odot c
-\end{align*}
-
-\end{center}
 
 \vspace{\fill}
 
